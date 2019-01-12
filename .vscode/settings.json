@@ -1,0 +1,20 @@
+{
+    "C_Cpp.configurationWarnings": "Disabled",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "files.associations": {
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "cstddef": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "type_traits": "cpp",
+        "typeinfo": "cpp",
+        "algorithm": "cpp",
+        "cstdint": "cpp",
+        "list": "cpp",
+        "iosfwd": "cpp"
+    }
+}
