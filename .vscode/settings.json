@@ -15,6 +15,13 @@
         "algorithm": "cpp",
         "cstdint": "cpp",
         "list": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "vector": "cpp",
+        "bitset": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }

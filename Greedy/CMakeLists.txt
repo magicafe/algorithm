@@ -1,0 +1,1 @@
+add_library(Greedy Edge.cpp UnionFind.cpp MaxSpaceClustering.cpp BitClustering.h)
