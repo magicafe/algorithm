@@ -1,0 +1,1 @@
+add_library(Huffman Node.cpp Huffman.cpp)

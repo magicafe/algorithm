@@ -5,6 +5,7 @@
 #include "Utils/Utils.h"
 #include "Greedy/MaxSpaceClustering.h"
 #include "Greedy/BitClustering.h"
+#include "Huffman/Huffman.h"
 
 int main(int argc, char *argv[])
 {
@@ -30,17 +31,23 @@ int main(int argc, char *argv[])
     // auto result3 = g3->ComputeSCC();
     // PrintListSize(result3, 5);
 
-    MaxSpaceClustering clustering("/Users/luodong/workspace/cpp/algorithm/Data/clustering.txt");
-    std::cout << clustering.Compute(4) << std::endl;
+    // =========================
 
-    std::ifstream fs("/Users/luodong/workspace/cpp/algorithm/Data/clustering_big.txt");
-    int verticesNum = 0;
-    int bitSize = 0;
-    fs >> verticesNum >> bitSize;
-    BitClustering bitClustering(fs, verticesNum);
-    bitClustering.Calc1();
-    bitClustering.Calc2();
-    std::cout << bitClustering.Count() << std::endl;
+    // MaxSpaceClustering clustering("/Users/luodong/workspace/cpp/algorithm/Data/clustering.txt");
+    // std::cout << clustering.Compute(4) << std::endl;
+
+    // std::ifstream fs("/Users/luodong/workspace/cpp/algorithm/Data/clustering_big.txt");
+    // int verticesNum = 0;
+    // int bitSize = 0;
+    // fs >> verticesNum >> bitSize;
+    // BitClustering bitClustering(fs, verticesNum);
+    // bitClustering.Calc1();
+    // bitClustering.Calc2();
+    // std::cout << bitClustering.Count() << std::endl;
+
+    hm::Huffman huffman("/Users/luodong/workspace/cpp/algorithm/Data/huffman.txt");
+    huffman.Run();
+    huffman.PrintInfo();
 
     return 0;
 }
