@@ -6,6 +6,7 @@
 #include "Greedy/MaxSpaceClustering.h"
 #include "Greedy/BitClustering.h"
 #include "Huffman/Huffman.h"
+#include "MWis/MWis.h"
 
 int main(int argc, char *argv[])
 {
@@ -48,6 +49,9 @@ int main(int argc, char *argv[])
     hm::Huffman huffman("/Users/luodong/workspace/cpp/algorithm/Data/huffman.txt");
     huffman.Run();
     huffman.PrintInfo();
+
+    MWis mwis("/Users/luodong/workspace/cpp/algorithm/Data/mwis.txt");
+    mwis.Run();
 
     return 0;
 }
