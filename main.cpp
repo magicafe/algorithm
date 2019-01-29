@@ -7,6 +7,7 @@
 #include "Greedy/BitClustering.h"
 #include "Huffman/Huffman.h"
 #include "MWis/MWis.h"
+#include "Knapsack/Knapsack.h"
 
 int main(int argc, char *argv[])
 {
@@ -46,12 +47,15 @@ int main(int argc, char *argv[])
     // bitClustering.Calc2();
     // std::cout << bitClustering.Count() << std::endl;
 
-    hm::Huffman huffman("/Users/luodong/workspace/cpp/algorithm/Data/huffman.txt");
-    huffman.Run();
-    huffman.PrintInfo();
+    // hm::Huffman huffman("/Users/luodong/workspace/cpp/algorithm/Data/huffman.txt");
+    // huffman.Run();
+    // huffman.PrintInfo();
 
-    MWis mwis("/Users/luodong/workspace/cpp/algorithm/Data/mwis.txt");
-    mwis.Run();
+    // MWis mwis("/Users/luodong/workspace/cpp/algorithm/Data/mwis.txt");
+    // mwis.Run();
+
+    Knapsack knapsack("/Users/luodong/workspace/cpp/algorithm/Data/knapsack_big.txt");
+    knapsack.Run();
 
     return 0;
 }
