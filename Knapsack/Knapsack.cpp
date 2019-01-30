@@ -44,5 +44,32 @@ void Knapsack::Run()
         }
     }
 
+    std::cout << itemsCount << " " << knapsackSize << std::endl;
     std::cout << A[itemsCount][knapsackSize] << std::endl;
+
+    std::vector<int> items;
+
+    int i = itemsCount;
+    int j = knapsackSize;
+
+    while (i > 0 && j > 0)
+    {
+        if ((j - weights[i - 1] >= 0) && (A[i][j] == A[i - 1][j - weights[i - 1]] + values[i - 1]))
+        {
+            items.push_back(i - 1);
+            j -= weights[i - 1];
+        }
+        --i;
+    }
+
+    int totalWeight = 0;
+    int totalValue = 0;
+    std::cout << "Index\tWeight\t\tValue" << std::endl;
+    for (auto &&i : items)
+    {
+        totalWeight += weights[i];
+        totalValue += values[i];
+        std::cout << i << "\t" << weights[i] << "\t\t" << values[i] << std::endl;
+    }
+    std::cout << "Total\t" << totalWeight << "\t\t" << totalValue << std::endl;
 }
