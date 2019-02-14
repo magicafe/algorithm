@@ -8,6 +8,7 @@
 #include "Huffman/Huffman.h"
 #include "MWis/MWis.h"
 #include "Knapsack/Knapsack.h"
+#include "AllPairs.h"
 
 int main(int argc, char *argv[])
 {
@@ -54,8 +55,17 @@ int main(int argc, char *argv[])
     // MWis mwis("/Users/luodong/workspace/cpp/algorithm/Data/mwis.txt");
     // mwis.Run();
 
-    Knapsack knapsack("/Users/luodong/workspace/cpp/algorithm/Data/knapsack_big.txt");
-    knapsack.Run();
+    // Knapsack knapsack("/Users/luodong/workspace/cpp/algorithm/Data/knapsack_big.txt");
+    // knapsack.Run();
+
+    ASAP::AllPairs ap1("/Users/luodong/workspace/cpp/algorithm/Data/g1.txt");
+    ap1.Run();
+
+    ASAP::AllPairs ap2("/Users/luodong/workspace/cpp/algorithm/Data/g2.txt");
+    ap2.Run();
+
+    ASAP::AllPairs ap3("/Users/luodong/workspace/cpp/algorithm/Data/g3.txt");
+    ap3.Run();
 
     return 0;
 }
