@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <chrono>
+#include <ctime>
 #include "Graph/Graph.h"
 #include "Utils/Utils.h"
 #include "Greedy/MaxSpaceClustering.h"
@@ -58,14 +60,23 @@ int main(int argc, char *argv[])
     // Knapsack knapsack("/Users/luodong/workspace/cpp/algorithm/Data/knapsack_big.txt");
     // knapsack.Run();
 
-    ASAP::AllPairs ap1("/Users/luodong/workspace/cpp/algorithm/Data/g1.txt");
-    ap1.Run();
+    // ASAP::AllPairs ap1("/Users/luodong/workspace/cpp/algorithm/Data/g1.txt");
+    // ap1.Run();
 
-    ASAP::AllPairs ap2("/Users/luodong/workspace/cpp/algorithm/Data/g2.txt");
-    ap2.Run();
+    // ASAP::AllPairs ap2("/Users/luodong/workspace/cpp/algorithm/Data/g2.txt");
+    // ap2.Run();
 
-    ASAP::AllPairs ap3("/Users/luodong/workspace/cpp/algorithm/Data/g3.txt");
-    ap3.Run();
+    // ASAP::AllPairs ap3("/Users/luodong/workspace/cpp/algorithm/Data/g3.txt");
+    // ap3.Run();
+
+    auto start = std::chrono::system_clock::now();
+    ASAP::AllPairs aplarge("/Users/luodong/workspace/cpp/algorithm/Data/large.txt"); // answer:-6 cost time:7284.41s
+    aplarge.FloyWarshall();
+    auto end = std::chrono::system_clock::now();
+
+    std::chrono::duration<double> elapsed = end - start;
+
+    std::cout << elapsed.count() << std::endl;
 
     return 0;
 }

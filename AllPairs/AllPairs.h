@@ -27,6 +27,7 @@ public:
   int V;
   int E;
   ASAP::Edge **edges;
+  int **matrix;
 
   ~Graph()
   {
@@ -37,6 +38,15 @@ public:
         delete edges[i];
       }
       delete[] edges;
+    }
+
+    if (matrix != nullptr)
+    {
+      for (size_t i = 0; i < V; i++)
+      {
+        delete[] matrix[i];
+      }
+      delete[] matrix;
     }
   }
 };
@@ -50,7 +60,11 @@ public:
   AllPairs(std::string filename);
   ~AllPairs();
   bool BellmanFord(int src, int *dist);
+  void FloyWarshall();
   void Run();
+
+protected:
+  void PrintData(int **data);
 };
 } // namespace ASAP
 
