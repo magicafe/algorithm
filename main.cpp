@@ -3,6 +3,7 @@
 #include <fstream>
 #include <chrono>
 #include <ctime>
+#include <iomanip>
 #include "Graph/Graph.h"
 #include "Utils/Utils.h"
 #include "Greedy/MaxSpaceClustering.h"
@@ -11,6 +12,7 @@
 #include "MWis/MWis.h"
 #include "Knapsack/Knapsack.h"
 #include "AllPairs.h"
+#include "Tsp/Tsp.h"
 
 int main(int argc, char *argv[])
 {
@@ -69,14 +71,17 @@ int main(int argc, char *argv[])
     // ASAP::AllPairs ap3("/Users/luodong/workspace/cpp/algorithm/Data/g3.txt");
     // ap3.Run();
 
-    auto start = std::chrono::system_clock::now();
-    ASAP::AllPairs aplarge("/Users/luodong/workspace/cpp/algorithm/Data/large.txt"); // answer:-6 cost time:7284.41s
-    aplarge.FloyWarshall();
-    auto end = std::chrono::system_clock::now();
+    // auto start = std::chrono::system_clock::now();
+    // ASAP::AllPairs aplarge("/Users/luodong/workspace/cpp/algorithm/Data/large.txt"); // answer:-6 cost time:7284.41s
+    // aplarge.FloyWarshall();
+    // auto end = std::chrono::system_clock::now();
 
-    std::chrono::duration<double> elapsed = end - start;
+    // std::chrono::duration<double> elapsed = end - start;
 
-    std::cout << elapsed.count() << std::endl;
+    // std::cout << elapsed.count() << std::endl;
+
+    Tsp tsp("../Data/tsp.txt");
+    tsp.Run(0);
 
     return 0;
 }
