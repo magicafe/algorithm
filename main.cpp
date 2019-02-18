@@ -80,8 +80,12 @@ int main(int argc, char *argv[])
 
     // std::cout << elapsed.count() << std::endl;
 
+    auto start = std::chrono::system_clock::now();
     Tsp tsp("../Data/tsp.txt");
     tsp.Run(0);
+    auto end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed = end - start;
+    std::cout << elapsed.count() << std::endl;
 
     return 0;
 }
